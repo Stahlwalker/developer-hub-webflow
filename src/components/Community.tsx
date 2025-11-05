@@ -1,4 +1,4 @@
-import { Users, MessageSquare, Calendar, Trophy, Github, Youtube, Twitter, MessageCircle } from 'lucide-react';
+import { Users, MessageSquare, Calendar, Trophy, Github, Youtube, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const communityChannels = [

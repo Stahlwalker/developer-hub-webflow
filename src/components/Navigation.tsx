@@ -25,14 +25,14 @@ export function Navigation() {
             <a href="#docs" className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
               /docs
             </a>
-            <a href="#api" className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
-              /api
-            </a>
             <a href="#playground" className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
               /playground
             </a>
-            <a href="#examples" className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
-              /examples
+            <a href="#integrations" className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
+              /integrations
+            </a>
+            <a href="#community" className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
+              /community
             </a>
           </div>
 
@@ -89,14 +89,14 @@ export function Navigation() {
             <a href="#docs" className="block px-3 py-2 rounded font-mono text-sm text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
               /docs
             </a>
-            <a href="#api" className="block px-3 py-2 rounded font-mono text-sm text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
-              /api
-            </a>
             <a href="#playground" className="block px-3 py-2 rounded font-mono text-sm text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
               /playground
             </a>
-            <a href="#examples" className="block px-3 py-2 rounded font-mono text-sm text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
-              /examples
+            <a href="#integrations" className="block px-3 py-2 rounded font-mono text-sm text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
+              /integrations
+            </a>
+            <a href="#community" className="block px-3 py-2 rounded font-mono text-sm text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
+              /community
             </a>
             <button className="w-full mt-2 px-4 py-2 bg-terminal-cyan hover:bg-terminal-cyan/90 text-crt-darker font-mono font-bold rounded transition-colors">
               START_

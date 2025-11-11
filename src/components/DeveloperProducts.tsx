@@ -70,7 +70,7 @@ export function DeveloperProducts() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold font-mono mb-4 text-terminal-cyan neon-text"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono mb-4 text-terminal-cyan neon-text px-4"
           >
             {'>'} DEVELOPER_PRODUCTS
           </motion.h2>
@@ -79,7 +79,7 @@ export function DeveloperProducts() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-gray-400 font-mono"
+            className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4"
           >
             Build, extend, and scale with Webflow's developer platform
           </motion.p>

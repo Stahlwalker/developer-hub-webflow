@@ -115,14 +115,14 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-20"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-20 px-4"
         >
-          <button className="group inline-flex items-center px-8 py-4 bg-terminal-cyan hover:bg-terminal-cyan/90 text-crt-darker text-lg font-bold font-mono rounded-lg transition-all hover:shadow-neon-cyan">
+          <button className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-terminal-cyan hover:bg-terminal-cyan/90 text-crt-darker text-base sm:text-lg font-bold font-mono rounded-lg transition-all hover:shadow-neon-cyan">
             <span>START_BUILDING</span>
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </button>
-          <button className="inline-flex items-center px-8 py-4 border-2 border-terminal-cyan/30 hover:border-terminal-cyan text-terminal-cyan text-lg font-bold font-mono rounded-lg transition-all hover:shadow-neon-cyan">
-            <Code className="mr-2 w-5 h-5" />
+          <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-terminal-cyan/30 hover:border-terminal-cyan text-terminal-cyan text-base sm:text-lg font-bold font-mono rounded-lg transition-all hover:shadow-neon-cyan">
+            <Code className="mr-2 w-4 sm:w-5 h-4 sm:h-5" />
             <span>VIEW_DOCS</span>
           </button>
         </motion.div>

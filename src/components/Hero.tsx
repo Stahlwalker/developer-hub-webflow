@@ -89,9 +89,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-12"
+          className="mb-12 px-4"
         >
-          <div className="inline-block terminal-window p-4 sm:p-6 font-mono text-left max-w-2xl w-full mx-4 sm:mx-0">
+          <div className="inline-block terminal-window p-4 sm:p-6 font-mono text-left max-w-2xl w-full sm:w-auto">
             <div className="flex items-center gap-2 mb-4 pt-4">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -115,7 +115,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-20 px-4"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-20 px-4 max-w-md sm:max-w-none mx-auto"
         >
           <button className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-terminal-cyan hover:bg-terminal-cyan/90 text-crt-darker text-base sm:text-lg font-bold font-mono rounded-lg transition-all hover:shadow-neon-cyan">
             <span>START_BUILDING</span>

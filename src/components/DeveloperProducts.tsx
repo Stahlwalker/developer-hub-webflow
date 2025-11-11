@@ -85,7 +85,7 @@ export function DeveloperProducts() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {products.map((product, index) => {
             const Icon = product.icon;
             return (
@@ -96,7 +96,7 @@ export function DeveloperProducts() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="retro-card p-6 hover:scale-105 transition-all group relative overflow-hidden"
+                className="retro-card p-4 sm:p-6 hover:scale-105 transition-all group relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 text-6xl font-mono text-white/5 font-bold">
                   {String(index + 1).padStart(2, '0')}
@@ -141,16 +141,16 @@ export function DeveloperProducts() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-16 text-center px-4"
         >
-          <div className="inline-block terminal-window p-8 font-mono">
+          <div className="inline-block terminal-window p-4 sm:p-8 font-mono w-full max-w-lg">
             <div className="flex items-center gap-2 mb-4 pt-4">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
-            <div className="text-left space-y-2 text-sm">
-              <div className="text-terminal-green">$ npm install @webflow/sdk</div>
+            <div className="text-left space-y-2 text-xs sm:text-sm overflow-x-auto">
+              <div className="text-terminal-green whitespace-nowrap">$ npm install @webflow/sdk</div>
               <div className="text-terminal-cyan">→ Installing Webflow SDK...</div>
               <div className="text-gray-400">→ Ready to build amazing things</div>
             </div>

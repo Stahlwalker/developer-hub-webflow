@@ -64,18 +64,18 @@ fetch('https://api.webflow.com/v2${path}', {
     <section id="playground" className="py-20 px-4 sm:px-6 lg:px-8 retro-gradient">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold font-mono mb-4 text-terminal-cyan neon-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono mb-4 text-terminal-cyan neon-text">
             {'>'} API_PLAYGROUND
           </h2>
-          <p className="text-lg text-gray-400 font-mono">
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4">
             Test endpoints in real-time → No API key required for demo
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {/* Left Panel - Configuration */}
-          <div className="retro-card p-6">
-            <h3 className="text-xl font-semibold mb-6 font-mono text-terminal-cyan">{'>'} REQUEST_CONFIG</h3>
+          <div className="retro-card p-4 sm:p-6">
+            <h3 className="text-lg sm:text-xl font-semibold mb-6 font-mono text-terminal-cyan">{'>'} REQUEST_CONFIG</h3>
 
             <div className="space-y-4">
               <div>
@@ -153,8 +153,8 @@ fetch('https://api.webflow.com/v2${path}', {
           </div>
 
           {/* Right Panel - Response */}
-          <div className="glass-effect rounded-xl p-6">
-            <h3 className="text-xl font-semibold mb-6">Response</h3>
+          <div className="retro-card p-4 sm:p-6">
+            <h3 className="text-lg sm:text-xl font-semibold mb-6 font-mono text-terminal-cyan">Response</h3>
             {response ? (
               <CodeSnippet
                 code={response}

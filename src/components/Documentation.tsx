@@ -50,22 +50,22 @@ export function Documentation() {
     <section id="docs" className="py-20 px-4 sm:px-6 lg:px-8 bg-crt-dark/30 dot-matrix">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold font-mono mb-4 text-terminal-cyan neon-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono mb-4 text-terminal-cyan neon-text">
             $ cat DOCUMENTATION
           </h2>
-          <p className="text-lg text-gray-400 font-mono">
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4">
             {'> '} Everything you need to ship with the Webflow API
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {docSections.map((section, index) => {
             const Icon = section.icon;
             return (
               <a
                 key={index}
                 href="#"
-                className="retro-card p-6 hover:scale-105 transition-all group relative overflow-hidden"
+                className="retro-card p-4 sm:p-6 hover:scale-105 transition-all group relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 text-6xl font-mono text-white/5 font-bold">
                   0{index + 1}

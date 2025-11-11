@@ -79,7 +79,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-8xl font-bold mb-6 font-display"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 font-display"
         >
           <span className="block text-white">Build with</span>
           <span className="block text-terminal-cyan neon-text animate-glow">Webflow_</span>
@@ -91,20 +91,20 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-12"
         >
-          <div className="inline-block terminal-window p-6 font-mono text-left max-w-2xl">
+          <div className="inline-block terminal-window p-4 sm:p-6 font-mono text-left max-w-2xl w-full mx-4 sm:mx-0">
             <div className="flex items-center gap-2 mb-4 pt-4">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
               <span className="ml-2 text-xs text-terminal-cyan/60">webflow-api-v2</span>
             </div>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-2 text-xs sm:text-sm overflow-x-auto">
               <div className="flex items-start">
-                <span className="text-terminal-green mr-2">$</span>
-                <span className="text-gray-300">curl -X GET https://api.webflow.com/v2/sites</span>
+                <span className="text-terminal-green mr-2 flex-shrink-0">$</span>
+                <span className="text-gray-300 break-all">curl -X GET https://api.webflow.com/v2/sites</span>
               </div>
               <div className="flex items-start text-terminal-cyan/70">
-                <span className="mr-2">→</span>
+                <span className="mr-2 flex-shrink-0">→</span>
                 <span>200 OK • 15ms • Everything you need to build.</span>
               </div>
             </div>

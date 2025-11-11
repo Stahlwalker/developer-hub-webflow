@@ -46,7 +46,7 @@ export function Integrations() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold font-mono mb-4 text-terminal-magenta neon-text"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono mb-4 text-terminal-magenta neon-text"
           >
             $ ls INTEGRATIONS/
           </motion.h2>
@@ -55,14 +55,14 @@ export function Integrations() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-gray-400 font-mono"
+            className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4"
           >
             Connect Webflow with your favorite tools and services
           </motion.p>
         </div>
 
         {/* Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
           {integrationCategories.map((category, index) => {
             const Icon = category.icon;
             return (
@@ -72,7 +72,7 @@ export function Integrations() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="retro-card p-6 hover:scale-105 transition-all relative overflow-hidden"
+                className="retro-card p-4 sm:p-6 hover:scale-105 transition-all relative overflow-hidden"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className={`w-12 h-12 border-2 border-${category.color} rounded flex items-center justify-center`}>
@@ -111,10 +111,10 @@ export function Integrations() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="retro-card p-8"
+          className="retro-card p-4 sm:p-6 md:p-8"
         >
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-2xl font-bold font-mono text-terminal-cyan">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold font-mono text-terminal-cyan">
               FEATURED_APPS
             </h3>
             <a
@@ -126,7 +126,7 @@ export function Integrations() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {featuredApps.map((app, index) => (
               <motion.a
                 key={index}
@@ -163,18 +163,18 @@ export function Integrations() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 text-center"
+          className="mt-12 text-center px-4"
         >
-          <div className="inline-block retro-card p-8">
-            <h3 className="text-2xl font-bold font-mono text-terminal-cyan mb-4">
+          <div className="inline-block retro-card p-6 sm:p-8 w-full max-w-3xl">
+            <h3 className="text-xl sm:text-2xl font-bold font-mono text-terminal-cyan mb-4">
               BUILD_YOUR_OWN
             </h3>
-            <p className="text-gray-400 font-mono mb-6 max-w-xl">
+            <p className="text-sm sm:text-base text-gray-400 font-mono mb-6 max-w-xl mx-auto">
               Use our APIs and SDKs to create custom integrations.
-              <br />
-              Publish to the marketplace and reach thousands of developers.
+              <br className="hidden sm:block" />
+              <span className="sm:inline"> </span>Publish to the marketplace and reach thousands of developers.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <button className="px-6 py-3 bg-terminal-cyan hover:bg-terminal-cyan/90 text-crt-darker font-mono font-bold rounded transition-all hover:shadow-neon-cyan">
                 START_BUILDING
               </button>

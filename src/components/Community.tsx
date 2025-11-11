@@ -98,7 +98,7 @@ export function Community() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold font-mono mb-4 text-terminal-green neon-text"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono mb-4 text-terminal-green neon-text"
           >
             $ whoami COMMUNITY
           </motion.h2>
@@ -107,14 +107,14 @@ export function Community() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-gray-400 font-mono"
+            className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4"
           >
             Connect with developers, get support, and contribute
           </motion.p>
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-16">
           {communityStats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -124,20 +124,20 @@ export function Community() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="retro-card p-6 text-center"
+                className="retro-card p-4 sm:p-6 text-center"
               >
-                <Icon className="w-8 h-8 text-terminal-cyan mx-auto mb-3" />
-                <div className="text-3xl font-bold font-mono text-terminal-cyan mb-1">
+                <Icon className="w-6 sm:w-8 h-6 sm:h-8 text-terminal-cyan mx-auto mb-2 sm:mb-3" />
+                <div className="text-2xl sm:text-3xl font-bold font-mono text-terminal-cyan mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-400 font-mono">{stat.label}</div>
+                <div className="text-xs sm:text-sm text-gray-400 font-mono">{stat.label}</div>
               </motion.div>
             );
           })}
         </div>
 
         {/* Community Channels */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16">
           {communityChannels.map((channel, index) => {
             const Icon = channel.icon;
             return (
@@ -148,7 +148,7 @@ export function Community() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="retro-card p-6 hover:scale-105 transition-all group text-center"
+                className="retro-card p-4 sm:p-6 hover:scale-105 transition-all group text-center"
               >
                 <div className={`w-12 h-12 border-2 border-${channel.color} rounded flex items-center justify-center mx-auto mb-4`}>
                   <Icon className={`w-6 h-6 text-${channel.color}`} />
@@ -166,17 +166,17 @@ export function Community() {
           })}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {/* Upcoming Events */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="retro-card p-6"
+            className="retro-card p-4 sm:p-6"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Calendar className="w-6 h-6 text-terminal-cyan" />
-              <h3 className="text-2xl font-bold font-mono text-terminal-cyan">
+              <Calendar className="w-5 sm:w-6 h-5 sm:h-6 text-terminal-cyan" />
+              <h3 className="text-xl sm:text-2xl font-bold font-mono text-terminal-cyan">
                 UPCOMING_EVENTS
               </h3>
             </div>
@@ -213,11 +213,11 @@ export function Community() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="retro-card p-6"
+            className="retro-card p-4 sm:p-6"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Trophy className="w-6 h-6 text-terminal-green" />
-              <h3 className="text-2xl font-bold font-mono text-terminal-green">
+              <Trophy className="w-5 sm:w-6 h-5 sm:h-6 text-terminal-green" />
+              <h3 className="text-xl sm:text-2xl font-bold font-mono text-terminal-green">
                 GET_INVOLVED
               </h3>
             </div>
@@ -255,15 +255,17 @@ export function Community() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 text-center terminal-window p-8 font-mono"
+          className="mt-12 text-center terminal-window p-4 sm:p-6 md:p-8 font-mono mx-4"
         >
-          <div className="flex items-center gap-2 justify-center mb-4 pt-4">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            <span className="ml-2 text-xs text-terminal-cyan/60">support.webflow.com</span>
+          <div className="flex items-center gap-2 justify-center mb-4 pt-4 flex-wrap">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <span className="text-xs text-terminal-cyan/60">support.webflow.com</span>
           </div>
-          <div className="space-y-2 text-sm text-left max-w-2xl mx-auto">
+          <div className="space-y-2 text-xs sm:text-sm text-left max-w-2xl mx-auto">
             <div className="flex items-start">
               <span className="text-terminal-green mr-2">$</span>
               <span className="text-gray-300">Need help? Our support team is here 24/7</span>

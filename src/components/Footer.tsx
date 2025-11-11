@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-crt-darker border-t-2 border-terminal-cyan/20 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 border-2 border-terminal-cyan rounded flex items-center justify-center">
@@ -56,12 +56,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>&copy; 2024 Webflow, Inc. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Status</a>
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+          <p className="text-center md:text-left">&copy; 2024 Webflow, Inc. All rights reserved.</p>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            <a href="#" className="hover:text-white transition-colors whitespace-nowrap">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors whitespace-nowrap">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors whitespace-nowrap">Status</a>
           </div>
         </div>
       </div>

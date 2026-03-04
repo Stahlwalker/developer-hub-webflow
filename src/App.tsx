@@ -1,28 +1,13 @@
-import { Navigation } from './components/Navigation';
-import { Hero } from './components/Hero';
-import { DeveloperProducts } from './components/DeveloperProducts';
-import { Documentation } from './components/Documentation';
-import { APIPlayground } from './components/APIPlayground';
-import { Examples } from './components/Examples';
-import { Integrations } from './components/Integrations';
-import { Community } from './components/Community';
-import { Footer } from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import { RetroPage } from './pages/RetroPage';
+import { WebflowPage } from './pages/WebflowPage';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main>
-        <Hero />
-        <DeveloperProducts />
-        <Documentation />
-        <APIPlayground />
-        <Examples />
-        <Integrations />
-        <Community />
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<RetroPage />} />
+      <Route path="/new-design" element={<WebflowPage />} />
+    </Routes>
   );
 }
 

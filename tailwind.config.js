@@ -28,10 +28,30 @@ export default {
           pink: '#f472b6',
           blue: '#60a5fa',
         },
+        // Webflow brand colors
+        wf: {
+          blue: '#146EF5',
+          'blue-hover': '#0F5BD6',
+          'blue-light': '#E8F0FE',
+          dark: '#1A1A1A',
+          gray: {
+            50: '#FAFAFA',
+            100: '#F5F5F5',
+            200: '#E5E5E5',
+            300: '#D4D4D4',
+            400: '#A3A3A3',
+            500: '#737373',
+            600: '#525252',
+            700: '#404040',
+            800: '#262626',
+            900: '#171717',
+          },
+        },
       },
       fontFamily: {
         mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'monospace'],
         display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

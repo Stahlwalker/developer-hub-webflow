@@ -51,12 +51,12 @@ export function WfFooter() {
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
-            <div className="mt-4">
-              <Link
-                to="/"
-                className="text-sm font-sans text-wf-gray-500 hover:text-white transition-colors"
-              >
-                View retro version →
+            <div className="mt-4 space-y-2">
+              <Link to="/" className="block text-sm font-sans text-wf-gray-500 hover:text-white transition-colors">
+                Retro version →
+              </Link>
+              <Link to="/new-design-v2" className="block text-sm font-sans text-wf-gray-500 hover:text-white transition-colors">
+                v2 (on-brand) →
               </Link>
             </div>
           </div>

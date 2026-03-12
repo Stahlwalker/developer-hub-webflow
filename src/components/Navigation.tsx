@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X, Moon, Sun, Search, Github, Terminal } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
+import { VersionSwitcher } from './VersionSwitcher';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,12 +60,7 @@ export function Navigation() {
             >
               {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
             </button>
-            <Link
-              to="/new-design"
-              className="px-3 py-1.5 text-xs font-mono text-terminal-cyan/60 hover:text-terminal-cyan border border-terminal-cyan/20 hover:border-terminal-cyan rounded transition-colors"
-            >
-              NEW_DESIGN
-            </Link>
+            <VersionSwitcher variant="retro" />
             <button className="px-4 py-2 bg-terminal-cyan hover:bg-terminal-cyan/90 text-crt-darker text-sm font-mono font-bold rounded transition-all hover:shadow-neon-cyan">
               START_
             </button>

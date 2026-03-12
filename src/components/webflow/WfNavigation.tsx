@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, Search, Github, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { VersionSwitcher } from '../VersionSwitcher';
 
 export function WfNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,12 +51,7 @@ export function WfNavigation() {
             >
               <Github className="w-4 h-4" />
             </a>
-            <Link
-              to="/"
-              className="px-3 py-1.5 text-xs font-medium font-sans text-wf-gray-500 hover:text-wf-dark border border-wf-gray-200 rounded-lg hover:bg-wf-gray-50 transition-colors"
-            >
-              Retro version
-            </Link>
+            <VersionSwitcher variant="light" />
             <a href="#" className="group inline-flex items-center px-4 py-2 bg-wf-blue hover:bg-wf-blue-hover text-white text-sm font-semibold font-sans rounded-lg transition-all">
               Get started
               <ArrowRight className="ml-1.5 w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -95,12 +90,7 @@ export function WfNavigation() {
               Community
             </a>
             <div className="pt-2 space-y-2">
-              <Link
-                to="/"
-                className="block text-center px-4 py-2 text-sm font-medium font-sans text-wf-gray-500 border border-wf-gray-200 rounded-lg"
-              >
-                Retro version
-              </Link>
+              <VersionSwitcher variant="light" />
               <a href="#" className="block text-center px-4 py-2 bg-wf-blue text-white font-semibold font-sans rounded-lg">
                 Get started
               </a>

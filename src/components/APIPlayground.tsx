@@ -67,7 +67,7 @@ fetch('https://api.webflow.com/v2${path}', {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono mb-4 text-terminal-cyan neon-text">
             {'>'} API_PLAYGROUND
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4">
+          <p className="text-sm sm:text-base md:text-lg text-gray-500 dark:text-gray-400 font-mono px-4">
             Test endpoints in real-time → No API key required for demo
           </p>
         </div>
@@ -83,7 +83,7 @@ fetch('https://api.webflow.com/v2${path}', {
                 <select
                   value={API_ENDPOINTS.findIndex(e => e === selectedEndpoint)}
                   onChange={(e) => setSelectedEndpoint(API_ENDPOINTS[parseInt(e.target.value)])}
-                  className="w-full px-4 py-2 rounded-lg border-2 border-terminal-cyan/30 bg-crt-dark focus:border-terminal-cyan outline-none font-mono text-sm text-gray-300"
+                  className="w-full px-4 py-2 rounded-lg border-2 border-terminal-cyan/30 bg-crt-dark focus:border-terminal-cyan outline-none font-mono text-sm text-gray-700 dark:text-gray-300"
                 >
                   {API_ENDPOINTS.map((endpoint, index) => (
                     <option key={index} value={index}>
@@ -100,7 +100,7 @@ fetch('https://api.webflow.com/v2${path}', {
                   value={apiKey}
                   onChange={(e) => setApiKey(e.target.value)}
                   placeholder="Enter your Webflow API key"
-                  className="w-full px-4 py-2 rounded-lg border-2 border-terminal-cyan/30 bg-crt-dark focus:border-terminal-cyan outline-none font-mono text-sm text-gray-300"
+                  className="w-full px-4 py-2 rounded-lg border-2 border-terminal-cyan/30 bg-crt-dark focus:border-terminal-cyan outline-none font-mono text-sm text-gray-700 dark:text-gray-300"
                 />
               </div>
 
@@ -112,7 +112,7 @@ fetch('https://api.webflow.com/v2${path}', {
                     value={siteId}
                     onChange={(e) => setSiteId(e.target.value)}
                     placeholder="Enter site ID"
-                    className="w-full px-4 py-2 rounded-lg border-2 border-terminal-cyan/30 bg-crt-dark focus:border-terminal-cyan outline-none font-mono text-sm text-gray-300"
+                    className="w-full px-4 py-2 rounded-lg border-2 border-terminal-cyan/30 bg-crt-dark focus:border-terminal-cyan outline-none font-mono text-sm text-gray-700 dark:text-gray-300"
                   />
                 </div>
               )}
@@ -162,7 +162,7 @@ fetch('https://api.webflow.com/v2${path}', {
                 title="JSON Response"
               />
             ) : (
-              <div className="flex items-center justify-center h-64 text-gray-400 dark:text-gray-600">
+              <div className="flex items-center justify-center h-64 text-gray-500 dark:text-gray-600">
                 <div className="text-center">
                   <Play className="w-12 h-12 mx-auto mb-4 opacity-50" />
                   <p>Execute a request to see the response</p>

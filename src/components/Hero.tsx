@@ -81,7 +81,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 font-display"
         >
-          <span className="block text-white">Build with</span>
+          <span className="block text-gray-900 dark:text-white">Build with</span>
           <span className="block text-terminal-cyan neon-text animate-glow">Webflow_</span>
         </motion.h1>
 
@@ -101,7 +101,7 @@ export function Hero() {
             <div className="space-y-2 text-xs sm:text-sm overflow-x-auto">
               <div className="flex items-start">
                 <span className="text-terminal-green mr-2 flex-shrink-0">$</span>
-                <span className="text-gray-300 break-all">curl -X GET https://api.webflow.com/v2/sites</span>
+                <span className="text-gray-700 dark:text-gray-300 break-all">curl -X GET https://api.webflow.com/v2/sites</span>
               </div>
               <div className="flex items-start text-terminal-cyan/70">
                 <span className="mr-2 flex-shrink-0">→</span>
@@ -139,7 +139,7 @@ export function Hero() {
               <Terminal className="w-8 h-8 text-terminal-cyan" />
             </div>
             <div className="text-3xl font-bold font-mono text-terminal-cyan mb-2">REST</div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
               Clean, RESTful APIs with full CRUD operations
             </p>
           </div>
@@ -149,7 +149,7 @@ export function Hero() {
               <Database className="w-8 h-8 text-terminal-magenta" />
             </div>
             <div className="text-3xl font-bold font-mono text-terminal-magenta mb-2">CMS</div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
               Powerful CMS API for dynamic content management
             </p>
           </div>
@@ -159,7 +159,7 @@ export function Hero() {
               <Code className="w-8 h-8 text-terminal-green" />
             </div>
             <div className="text-3xl font-bold font-mono text-terminal-green mb-2">SDK</div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
               Official SDKs for JavaScript, Python, and more
             </p>
           </div>

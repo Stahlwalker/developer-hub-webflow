@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Menu, X, Moon, Sun, Search, Github, Terminal } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
+import { Menu, X, Search, Github, Terminal, Moon, Sun } from 'lucide-react';
 import { VersionSwitcher } from './VersionSwitcher';
+import { useTheme } from '../contexts/ThemeContext';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,16 +23,16 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            <a href="#docs" className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
+            <a href="#docs" className="px-4 py-2 text-sm font-mono text-gray-600 dark:text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
               /docs
             </a>
-            <a href="#playground" className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
+            <a href="#playground" className="px-4 py-2 text-sm font-mono text-gray-600 dark:text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
               /playground
             </a>
-            <a href="#integrations" className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
+            <a href="#integrations" className="px-4 py-2 text-sm font-mono text-gray-600 dark:text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
               /integrations
             </a>
-            <a href="#community" className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
+            <a href="#community" className="px-4 py-2 text-sm font-mono text-gray-600 dark:text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5 rounded transition-colors">
               /community
             </a>
           </div>
@@ -58,7 +58,7 @@ export function Navigation() {
               className="p-2 rounded border border-terminal-cyan/20 hover:border-terminal-cyan text-terminal-cyan/60 hover:text-terminal-cyan transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
             <VersionSwitcher variant="retro" />
             <button className="px-4 py-2 bg-terminal-cyan hover:bg-terminal-cyan/90 text-crt-darker text-sm font-mono font-bold rounded transition-all hover:shadow-neon-cyan">
@@ -71,9 +71,11 @@ export function Navigation() {
             <button
               onClick={toggleTheme}
               className="p-2 rounded border border-terminal-cyan/20 text-terminal-cyan/60"
+              aria-label="Toggle theme"
             >
-              {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
+            <VersionSwitcher variant="retro" />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded border border-terminal-cyan/20 text-terminal-cyan/60"
@@ -88,16 +90,16 @@ export function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-crt-dark border-t border-terminal-cyan/20">
           <div className="px-4 pt-2 pb-4 space-y-1">
-            <a href="#docs" className="block px-3 py-2 rounded font-mono text-sm text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
+            <a href="#docs" className="block px-3 py-2 rounded font-mono text-sm text-gray-600 dark:text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
               /docs
             </a>
-            <a href="#playground" className="block px-3 py-2 rounded font-mono text-sm text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
+            <a href="#playground" className="block px-3 py-2 rounded font-mono text-sm text-gray-600 dark:text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
               /playground
             </a>
-            <a href="#integrations" className="block px-3 py-2 rounded font-mono text-sm text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
+            <a href="#integrations" className="block px-3 py-2 rounded font-mono text-sm text-gray-600 dark:text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
               /integrations
             </a>
-            <a href="#community" className="block px-3 py-2 rounded font-mono text-sm text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
+            <a href="#community" className="block px-3 py-2 rounded font-mono text-sm text-gray-600 dark:text-gray-400 hover:text-terminal-cyan hover:bg-terminal-cyan/5">
               /community
             </a>
             <button className="w-full mt-2 px-4 py-2 bg-terminal-cyan hover:bg-terminal-cyan/90 text-crt-darker font-mono font-bold rounded transition-colors">

@@ -48,9 +48,9 @@ export function VersionSwitcher({ variant = 'light' }: VersionSwitcherProps) {
     retro: {
       button: 'border border-terminal-cyan/20 hover:border-terminal-cyan text-terminal-cyan/60 hover:text-terminal-cyan',
       dropdown: 'bg-crt-dark border border-terminal-cyan/30 shadow-neon-cyan',
-      item: 'text-gray-400 hover:bg-terminal-cyan/5 hover:text-terminal-cyan',
+      item: 'text-gray-600 dark:text-gray-400 hover:bg-terminal-cyan/5 hover:text-terminal-cyan',
       active: 'bg-terminal-cyan/10 text-terminal-cyan',
-      desc: 'text-gray-500',
+      desc: 'text-gray-500 dark:text-gray-500',
     },
   };
 

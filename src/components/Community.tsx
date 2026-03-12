@@ -107,7 +107,7 @@ export function Community() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4"
+            className="text-sm sm:text-base md:text-lg text-gray-500 dark:text-gray-400 font-mono px-4"
           >
             Connect with developers, get support, and contribute
           </motion.p>
@@ -130,7 +130,7 @@ export function Community() {
                 <div className="text-2xl sm:text-3xl font-bold font-mono text-terminal-cyan mb-1">
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-400 font-mono">{stat.label}</div>
+                <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-mono">{stat.label}</div>
               </motion.div>
             );
           })}
@@ -156,10 +156,10 @@ export function Community() {
                 <div className={`text-xs font-bold font-mono text-${channel.color} mb-2`}>
                   {channel.name}
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-terminal-cyan transition-colors">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white group-hover:text-terminal-cyan transition-colors">
                   {channel.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-3">{channel.description}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">{channel.description}</p>
                 <div className="text-terminal-cyan font-mono text-sm">{channel.members} members</div>
               </motion.a>
             );
@@ -188,13 +188,13 @@ export function Community() {
                   className="p-4 bg-crt-dark/50 border border-terminal-cyan/20 rounded hover:border-terminal-cyan/40 transition-all"
                 >
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-semibold text-white">{event.title}</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">{event.title}</h4>
                     <span className="text-xs font-mono px-2 py-1 bg-terminal-cyan/20 text-terminal-cyan rounded">
                       {event.type}
                     </span>
                   </div>
                   <div className="flex justify-between items-center text-sm">
-                    <span className="text-gray-400 font-mono">{event.date}</span>
+                    <span className="text-gray-500 dark:text-gray-400 font-mono">{event.date}</span>
                     <span className="text-terminal-cyan font-mono text-xs">
                       {event.attendees} attending
                     </span>
@@ -228,8 +228,8 @@ export function Community() {
                   key={index}
                   className="p-4 bg-crt-dark/50 border border-terminal-green/20 rounded hover:border-terminal-green/40 transition-all"
                 >
-                  <h4 className="font-semibold text-white mb-2">{program.title}</h4>
-                  <p className="text-gray-400 text-sm mb-3">{program.description}</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{program.title}</h4>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">{program.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {program.perks.map((perk, idx) => (
                       <span
@@ -268,7 +268,7 @@ export function Community() {
           <div className="space-y-2 text-xs sm:text-sm text-left max-w-2xl mx-auto">
             <div className="flex items-start">
               <span className="text-terminal-green mr-2">$</span>
-              <span className="text-gray-300">Need help? Our support team is here 24/7</span>
+              <span className="text-gray-700 dark:text-gray-300">Need help? Our support team is here 24/7</span>
             </div>
             <div className="flex items-start text-terminal-cyan/70">
               <span className="mr-2">→</span>

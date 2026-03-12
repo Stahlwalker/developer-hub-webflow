@@ -8,19 +8,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Retro terminal colors
+        // Retro terminal colors — theme-aware via CSS variables
         terminal: {
-          green: '#00ff41',
-          cyan: '#00ffff',
-          magenta: '#ff00ff',
-          yellow: '#ffff00',
-          orange: '#ff8800',
+          green: 'rgb(var(--terminal-green) / <alpha-value>)',
+          cyan: 'rgb(var(--terminal-cyan) / <alpha-value>)',
+          magenta: 'rgb(var(--terminal-magenta) / <alpha-value>)',
+          yellow: 'rgb(var(--terminal-yellow) / <alpha-value>)',
+          orange: 'rgb(var(--terminal-orange) / <alpha-value>)',
         },
-        // Retro CRT colors
+        // Retro CRT colors — theme-aware via CSS variables
         crt: {
-          dark: '#0a0e27',
-          darker: '#050810',
-          glow: '#1a1f3a',
+          dark: 'rgb(var(--crt-dark) / <alpha-value>)',
+          darker: 'rgb(var(--crt-darker) / <alpha-value>)',
+          glow: 'rgb(var(--crt-glow) / <alpha-value>)',
         },
         // Accent colors
         accent: {
@@ -118,9 +118,9 @@ export default {
         },
       },
       boxShadow: {
-        'neon-cyan': '0 0 5px theme(colors.terminal.cyan), 0 0 20px theme(colors.terminal.cyan)',
-        'neon-green': '0 0 5px theme(colors.terminal.green), 0 0 20px theme(colors.terminal.green)',
-        'neon-magenta': '0 0 5px theme(colors.terminal.magenta), 0 0 20px theme(colors.terminal.magenta)',
+        'neon-cyan': '0 0 5px rgb(var(--terminal-cyan) / 0.5), 0 0 20px rgb(var(--terminal-cyan) / 0.3)',
+        'neon-green': '0 0 5px rgb(var(--terminal-green) / 0.5), 0 0 20px rgb(var(--terminal-green) / 0.3)',
+        'neon-magenta': '0 0 5px rgb(var(--terminal-magenta) / 0.5), 0 0 20px rgb(var(--terminal-magenta) / 0.3)',
       },
     },
   },

@@ -44,6 +44,29 @@
   font-display: swap;
 }
 
+/* Theme-aware color variables */
+:root {
+  --terminal-cyan: 13 148 136;
+  --terminal-green: 5 150 105;
+  --terminal-magenta: 192 38 211;
+  --terminal-yellow: 245 158 11;
+  --terminal-orange: 234 88 12;
+  --crt-dark: 241 245 249;
+  --crt-darker: 248 250 252;
+  --crt-glow: 226 232 240;
+}
+
+.dark {
+  --terminal-cyan: 0 255 255;
+  --terminal-green: 0 255 65;
+  --terminal-magenta: 255 0 255;
+  --terminal-yellow: 255 255 0;
+  --terminal-orange: 255 136 0;
+  --crt-dark: 10 14 39;
+  --crt-darker: 5 8 16;
+  --crt-glow: 26 31 58;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -59,28 +82,36 @@
 }
 
 @layer utilities {
-  /* Retro gradient background */
+  /* Retro gradient background — adapts via CSS variables */
   .retro-gradient {
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+    background: linear-gradient(135deg,
+      rgb(var(--crt-darker)) 0%,
+      rgb(var(--crt-glow)) 50%,
+      rgb(var(--crt-darker)) 100%);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
   }
 
-  /* Grid pattern */
+  /* Grid pattern — adapts via CSS variables */
   .grid-pattern {
     background-image:
-      linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+      linear-gradient(rgb(var(--terminal-green) / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--terminal-green) / 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
-  /* CRT scanlines effect */
+  /* CRT scanlines effect — dark mode only */
   .scanlines {
     position: relative;
     overflow: hidden;
   }
 
-  .scanlines::before {
+  .scanlines::before,
+  .scanlines::after {
+    content: none;
+  }
+
+  .dark .scanlines::before {
     content: "";
     position: absolute;
     top: 0;
@@ -98,7 +129,7 @@
     z-index: 10;
   }
 
-  .scanlines::after {
+  .dark .scanlines::after {
     content: "";
     position: absolute;
     top: 0;
@@ -116,10 +147,15 @@
     z-index: 10;
   }
 
-  /* Terminal window effect */
+  /* Terminal window effect — adapts via CSS variables */
   .terminal-window {
-    @apply bg-crt-dark border-2 border-terminal-cyan/30 rounded-lg shadow-neon-cyan;
+    @apply bg-crt-dark border-2 border-terminal-cyan/30 rounded-lg;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     position: relative;
+  }
+
+  .dark .terminal-window {
+    box-shadow: 0 0 5px rgb(var(--terminal-cyan) / 0.5), 0 0 20px rgb(var(--terminal-cyan) / 0.3);
   }
 
   .terminal-window::before {
@@ -129,20 +165,24 @@
     left: 0;
     right: 0;
     height: 32px;
-    background: linear-gradient(180deg, rgba(0, 255, 255, 0.1) 0%, transparent 100%);
-    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    background: linear-gradient(180deg, rgb(var(--terminal-cyan) / 0.1) 0%, transparent 100%);
+    border-bottom: 1px solid rgb(var(--terminal-cyan) / 0.2);
     border-radius: 6px 6px 0 0;
   }
 
-  /* Neon text effect */
+  /* Neon text effect — dark mode only */
   .neon-text {
+    text-shadow: none;
+  }
+
+  .dark .neon-text {
     text-shadow:
       0 0 10px currentColor,
       0 0 20px currentColor,
       0 0 40px currentColor;
   }
 
-  /* Glitch effect */
+  /* Glitch effect — adapts via CSS variables */
   .glitch {
     position: relative;
   }
@@ -159,13 +199,13 @@
 
   .glitch::before {
     animation: glitch-1 2s infinite;
-    color: #00ffff;
+    color: rgb(var(--terminal-cyan));
     z-index: -1;
   }
 
   .glitch::after {
     animation: glitch-2 3s infinite;
-    color: #ff00ff;
+    color: rgb(var(--terminal-magenta));
     z-index: -2;
   }
 
@@ -199,24 +239,36 @@
     }
   }
 
-  /* Dot matrix pattern */
+  /* Dot matrix pattern — adapts via CSS variables */
   .dot-matrix {
-    background-image: radial-gradient(circle, rgba(0, 255, 65, 0.15) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgb(var(--terminal-green) / 0.08) 1px, transparent 1px);
     background-size: 20px 20px;
   }
 
-  /* Retro card style */
+  .dark .dot-matrix {
+    background-image: radial-gradient(circle, rgb(var(--terminal-green) / 0.15) 1px, transparent 1px);
+  }
+
+  /* Retro card style — adapts via CSS variables */
   .retro-card {
     @apply bg-crt-dark/50 backdrop-blur-sm border border-terminal-cyan/20 rounded-lg;
-    box-shadow:
-      0 0 20px rgba(0, 255, 255, 0.1),
-      inset 0 0 20px rgba(0, 255, 255, 0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   .retro-card:hover {
     @apply border-terminal-cyan/40;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .dark .retro-card {
     box-shadow:
-      0 0 30px rgba(0, 255, 255, 0.2),
-      inset 0 0 30px rgba(0, 255, 255, 0.08);
+      0 0 20px rgb(var(--terminal-cyan) / 0.1),
+      inset 0 0 20px rgb(var(--terminal-cyan) / 0.05);
+  }
+
+  .dark .retro-card:hover {
+    box-shadow:
+      0 0 30px rgb(var(--terminal-cyan) / 0.2),
+      inset 0 0 30px rgb(var(--terminal-cyan) / 0.08);
   }
 }

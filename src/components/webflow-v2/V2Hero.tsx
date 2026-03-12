@@ -1,7 +1,18 @@
-import { ArrowRight, Code, Terminal, Database } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, Code, Terminal, Database, Copy, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+const INSTALL_CMD = 'npm install -g @webflow/webflow-cli';
+
 export function V2Hero() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(INSTALL_CMD);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-14 sm:pt-16 bg-white">
       {/* Subtle monochromatic background — single blue accent circle, no gradient */}
@@ -47,19 +58,40 @@ export function V2Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mb-8 sm:mb-10 px-2 sm:px-4"
         >
-          <div className="inline-block bg-wfb-black rounded-lg p-4 sm:p-5 md:p-6 text-left max-w-2xl w-full border border-wfb-gray-800">
-            <div className="flex items-center gap-1.5 sm:gap-2 mb-3 sm:mb-4">
-              <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-wfb-gray-700"></div>
-              <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-wfb-gray-700"></div>
-              <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-wfb-gray-700"></div>
-              <span className="ml-1.5 sm:ml-2 text-[10px] sm:text-xs text-wfb-gray-500 font-mono">terminal</span>
+          <div className="inline-block bg-wfb-black rounded-lg text-left max-w-2xl w-full border border-wfb-gray-800">
+            <div className="flex items-center justify-between px-4 sm:px-5 md:px-6 pt-4 sm:pt-5 md:pt-6">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-wfb-gray-700" />
+                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-wfb-gray-700" />
+                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-wfb-gray-700" />
+                <span className="ml-1.5 sm:ml-2 text-[10px] sm:text-xs text-wfb-gray-500 font-mono">terminal</span>
+              </div>
+              <button
+                onClick={handleCopy}
+                className="flex items-center gap-1.5 text-[10px] sm:text-xs text-wfb-gray-500 hover:text-wfb-gray-300 font-mono transition-colors"
+              >
+                {copied ? (
+                  <>
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span className="text-emerald-400">Copied</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3.5 h-3.5" />
+                    <span className="hidden sm:inline">Copy</span>
+                  </>
+                )}
+              </button>
             </div>
-            <div className="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs md:text-sm font-mono overflow-x-auto">
+            <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 pt-3 sm:pt-4 space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs md:text-sm font-mono overflow-x-auto">
               <div className="text-wfb-gray-300">
-                <span className="text-wfb-blue">$</span> curl -X GET https://api.webflow.com/v2/sites
+                <span className="text-wfb-blue">$</span> npm install -g <span className="text-white">@webflow/webflow-cli</span>
               </div>
               <div className="text-wfb-gray-500">
-                → 200 OK · 15ms · Everything you need to build.
+                <span className="text-wfb-blue">$</span> webflow --version
+              </div>
+              <div className="text-wfb-gray-600">
+                → v2.4.1 · Ready to build.
               </div>
             </div>
           </div>

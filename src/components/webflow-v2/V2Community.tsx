@@ -238,12 +238,12 @@ export function V2Community() {
           </motion.div>
         </div>
 
-        {/* Support section — monochromatic dark */}
+        {/* Support section — monochromatic dark, narrower */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-8 sm:mt-12 bg-wfb-black rounded-lg p-5 sm:p-6 md:p-8 text-center"
+          className="mt-8 sm:mt-12 max-w-xl mx-auto bg-wfb-black rounded-lg p-5 sm:p-6 md:p-8 text-center"
         >
           <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-white mx-auto mb-3 sm:mb-4" />
           <h3 className="text-lg sm:text-xl font-semibold font-wf-heading text-white mb-2">Need help?</h3>

@@ -79,7 +79,7 @@ export function DeveloperProducts() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4"
+            className="text-sm sm:text-base md:text-lg text-gray-500 dark:text-gray-400 font-mono px-4"
           >
             Build, extend, and scale with Webflow's developer platform
           </motion.p>
@@ -98,7 +98,7 @@ export function DeveloperProducts() {
                 transition={{ delay: index * 0.1 }}
                 className="retro-card p-4 sm:p-6 hover:scale-105 transition-all group relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 text-6xl font-mono text-white/5 font-bold">
+                <div className="absolute top-0 right-0 text-6xl font-mono text-gray-900/5 dark:text-white/5 font-bold">
                   {String(index + 1).padStart(2, '0')}
                 </div>
 
@@ -111,17 +111,17 @@ export function DeveloperProducts() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-terminal-cyan transition-colors">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white group-hover:text-terminal-cyan transition-colors">
                   {product.title}
                 </h3>
 
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                <p className="text-gray-500 dark:text-gray-400 text-sm mb-4 leading-relaxed">
                   {product.description}
                 </p>
 
                 <div className="space-y-2">
                   {product.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs font-mono text-gray-500">
+                    <div key={idx} className="flex items-center gap-2 text-xs font-mono text-gray-600 dark:text-gray-500">
                       <span className="text-terminal-green">✓</span>
                       <span>{feature}</span>
                     </div>
@@ -152,7 +152,7 @@ export function DeveloperProducts() {
             <div className="text-left space-y-2 text-xs sm:text-sm overflow-x-auto">
               <div className="text-terminal-green whitespace-nowrap">$ npm install @webflow/sdk</div>
               <div className="text-terminal-cyan">→ Installing Webflow SDK...</div>
-              <div className="text-gray-400">→ Ready to build amazing things</div>
+              <div className="text-gray-500 dark:text-gray-400">→ Ready to build amazing things</div>
             </div>
           </div>
         </motion.div>

@@ -69,7 +69,7 @@ export function Examples() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono mb-4 text-terminal-green neon-text">$ CODE_EXAMPLES</h2>
-          <p className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4">
+          <p className="text-sm sm:text-base md:text-lg text-gray-500 dark:text-gray-400 font-mono px-4">
             Copy-paste snippets → Ship faster
           </p>
         </div>
@@ -81,7 +81,7 @@ export function Examples() {
                 <span className="text-terminal-cyan font-mono text-xl sm:text-2xl font-bold flex-shrink-0">0{index + 1}</span>
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold font-mono text-terminal-cyan">{example.title}</h3>
-                  <p className="text-gray-400 text-xs sm:text-sm font-mono">
+                  <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-mono">
                     {example.description}
                   </p>
                 </div>

@@ -55,7 +55,7 @@ export function Integrations() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4"
+            className="text-sm sm:text-base md:text-lg text-gray-500 dark:text-gray-400 font-mono px-4"
           >
             Connect Webflow with your favorite tools and services
           </motion.p>
@@ -83,11 +83,11 @@ export function Integrations() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-2 text-white font-mono">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white font-mono">
                   {category.title}
                 </h3>
 
-                <p className="text-gray-400 text-sm mb-4">
+                <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">
                   {category.description}
                 </p>
 
@@ -95,7 +95,7 @@ export function Integrations() {
                   {category.examples.map((example, idx) => (
                     <span
                       key={idx}
-                      className="text-xs font-mono px-2 py-1 bg-crt-glow/30 border border-terminal-cyan/20 rounded text-gray-300"
+                      className="text-xs font-mono px-2 py-1 bg-crt-glow/30 border border-terminal-cyan/20 rounded text-gray-700 dark:text-gray-300"
                     >
                       {example}
                     </span>
@@ -140,14 +140,14 @@ export function Integrations() {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="font-mono text-white group-hover:text-terminal-cyan transition-colors">
+                      <span className="font-mono text-gray-900 dark:text-white group-hover:text-terminal-cyan transition-colors">
                         {app.name}
                       </span>
                       {app.verified && (
                         <span className="text-terminal-green text-xs">✓</span>
                       )}
                     </div>
-                    <div className="text-xs font-mono text-gray-500">
+                    <div className="text-xs font-mono text-gray-600 dark:text-gray-500">
                       {app.category}
                     </div>
                   </div>
@@ -169,7 +169,7 @@ export function Integrations() {
             <h3 className="text-xl sm:text-2xl font-bold font-mono text-terminal-cyan mb-4">
               BUILD_YOUR_OWN
             </h3>
-            <p className="text-sm sm:text-base text-gray-400 font-mono mb-6 max-w-xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 font-mono mb-6 max-w-xl mx-auto">
               Use our APIs and SDKs to create custom integrations.
               <br className="hidden sm:block" />
               <span className="sm:inline"> </span>Publish to the marketplace and reach thousands of developers.

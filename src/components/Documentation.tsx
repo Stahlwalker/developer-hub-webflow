@@ -53,7 +53,7 @@ export function Documentation() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono mb-4 text-terminal-cyan neon-text">
             $ cat DOCUMENTATION
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-gray-400 font-mono px-4">
+          <p className="text-sm sm:text-base md:text-lg text-gray-500 dark:text-gray-400 font-mono px-4">
             {'> '} Everything you need to ship with the Webflow API
           </p>
         </div>
@@ -67,7 +67,7 @@ export function Documentation() {
                 href="#"
                 className="retro-card p-4 sm:p-6 hover:scale-105 transition-all group relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 text-6xl font-mono text-white/5 font-bold">
+                <div className="absolute top-0 right-0 text-6xl font-mono text-gray-900/5 dark:text-white/5 font-bold">
                   0{index + 1}
                 </div>
                 <div className="flex items-center gap-3 mb-4">
@@ -76,10 +76,10 @@ export function Documentation() {
                     {section.title}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-terminal-cyan transition-colors">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white group-hover:text-terminal-cyan transition-colors">
                   {section.subtitle}
                 </h3>
-                <p className="text-gray-400 text-sm font-mono leading-relaxed">
+                <p className="text-gray-500 dark:text-gray-400 text-sm font-mono leading-relaxed">
                   {section.description}
                 </p>
                 <div className="mt-4 text-terminal-cyan/60 text-xs font-mono">

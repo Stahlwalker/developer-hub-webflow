@@ -13,35 +13,7 @@ export function V3APIPlayground() {
   const [selectedEndpoint, setSelectedEndpoint] = useState(API_ENDPOINTS[0]);
   const [apiKey, setApiKey] = useState('');
   const [siteId, setSiteId] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [response, setResponse] = useState<string>('');
-  const [error, setError] = useState<string>('');
-
-  const handleExecute = async () => {
-    if (!apiKey) {
-      setError('Please enter your API key');
-      return;
-    }
-
-    setLoading(true);
-    setError('');
-    setResponse('');
-
-    setTimeout(() => {
-      setLoading(false);
-      setResponse(JSON.stringify({
-        sites: [
-          {
-            id: '6123abc456def789',
-            name: 'My Awesome Site',
-            shortName: 'my-site',
-            lastPublished: '2024-01-15T10:30:00.000Z',
-            createdOn: '2023-06-01T14:20:00.000Z'
-          }
-        ]
-      }, null, 2));
-    }, 1500);
-  };
+  const [error] = useState<string>('');
 
   const getCodeExample = () => {
     return `// Using fetch

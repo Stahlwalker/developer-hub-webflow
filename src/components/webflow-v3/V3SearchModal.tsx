@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { X, Sparkles, SlidersHorizontal, ChevronDown, Sun, Moon, Monitor } from 'lucide-react';
+import { Sparkles, SlidersHorizontal, ChevronDown, Sun, Moon, Monitor } from 'lucide-react';
 
 interface Props {
   onClose: () => void;

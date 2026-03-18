@@ -14,7 +14,7 @@ export function V3Hero() {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[107px] bg-white">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[140px] bg-white">
       {/* Subtle monochromatic background — single blue accent circle, no gradient */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] lg:w-[800px] h-[400px] sm:h-[600px] lg:h-[800px] rounded-full bg-wfb-blue/[0.03]" />
 

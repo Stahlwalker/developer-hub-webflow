@@ -71,6 +71,22 @@ export function WfFooter() {
           </div>
         </div>
       </div>
+
+      <div className="bg-black px-4 sm:px-6 lg:px-8 py-2.5 -mx-4 sm:-mx-6 lg:-mx-8 mt-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-1">
+          <span className="text-xs font-sans text-gray-600 mr-2">Designs:</span>
+          {[
+            { label: 'Retro', to: '/retro' },
+            { label: 'v1', to: '/new-design' },
+            { label: 'v2', to: '/new-design-v2' },
+            { label: 'v3', to: '/' },
+          ].map(({ label, to }) => (
+            <Link key={to} to={to} className="px-2.5 py-1 text-xs font-medium text-gray-400 hover:text-white rounded transition-colors">
+              {label}
+            </Link>
+          ))}
+        </div>
+      </div>
     </footer>
   );
 }

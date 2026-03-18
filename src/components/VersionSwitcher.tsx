@@ -6,6 +6,7 @@ const versions = [
   { path: '/', label: 'Retro', description: 'CRT terminal theme' },
   { path: '/new-design', label: 'v1', description: 'Modern design' },
   { path: '/new-design-v2', label: 'v2', description: 'On-brand design' },
+  { path: '/new-design-v3', label: 'v3', description: 'Factual content' },
 ];
 
 interface VersionSwitcherProps {

@@ -1,4 +1,4 @@
-import { Cloud, Code, Puzzle, Database, Cpu, Store, ArrowRight } from 'lucide-react';
+import { Cloud, Code, Puzzle, Database, Store, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const products = [
@@ -22,13 +22,6 @@ const products = [
     description: 'Programmatic access to sites, pages, CMS, forms, and assets.',
     tags: ['REST', 'Webhooks', 'Authentication'],
     href: 'https://developers.webflow.com/data/reference/rest-introduction',
-  },
-  {
-    icon: Cpu,
-    title: 'MCP Server',
-    description: 'Connect AI agents to your Webflow projects.',
-    tags: ['AI Agents', 'Data API', 'Designer API'],
-    href: 'https://developers.webflow.com/data/docs/ai-tools',
   },
   {
     icon: Store,
@@ -58,7 +51,7 @@ export function V3DeveloperProducts() {
             className="font-wf-heading font-semibold mb-3 sm:mb-4 text-wfb-black tracking-tight"
             style={{ fontSize: 'clamp(1.5rem, 5vw, 3.5rem)', lineHeight: 1.04 }}
           >
-            Developer Products
+            Developer Tools
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}

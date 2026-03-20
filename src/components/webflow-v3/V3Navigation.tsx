@@ -10,7 +10,7 @@ const resourcesLinks = [
 ];
 
 const centerNav = [
-  { label: 'Products', href: '#products' },
+  { label: 'Platform', href: '#products' },
   { label: 'API Requests', href: '#api-playground' },
   { label: 'Integrations', href: '#integrations' },
   { label: 'Community', href: '#community' },
@@ -93,8 +93,8 @@ export function V3Navigation() {
             {/* Center: nav items */}
             <div className="hidden md:flex items-center gap-0.5 flex-1 justify-center">
 
-              {/* Products */}
-              <a href="#products" className={navLinkClass}>Products</a>
+              {/* Platform */}
+              <a href="#products" className={navLinkClass}>Platform</a>
 
               {/* Resources dropdown — second */}
               <div ref={resourcesRef} className="relative">
@@ -126,7 +126,7 @@ export function V3Navigation() {
               </div>
 
               {/* Remaining nav items */}
-              {centerNav.filter(item => item.label !== 'Products').map((item) => (
+              {centerNav.filter(item => item.label !== 'Platform').map((item) => (
                 <a key={item.label} href={item.href} className={navLinkClass}>
                   {item.label}
                 </a>

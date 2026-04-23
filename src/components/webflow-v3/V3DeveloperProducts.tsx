@@ -18,7 +18,7 @@ const products = [
   },
   {
     icon: Database,
-    title: 'REST APIs',
+    title: 'APIs',
     description: 'Programmatic access to sites, pages, CMS, forms, and assets.',
     tags: ['REST', 'Webhooks', 'Authentication'],
     href: 'https://developers.webflow.com/data/reference/rest-introduction',

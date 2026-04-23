@@ -60,6 +60,17 @@ const platforms: Platform[] = [
     delay: 0.9,
     duration: 5.9,
   },
+  {
+    name: 'Rovo',
+    imgSrc: '/images/atlassian-rovo-icon.png',
+    accent: '#2684FF',
+    bg: '#0A1628',
+    border: '#0D2456',
+    bottom: '2%',
+    left: '44%',
+    delay: 1.2,
+    duration: 6.2,
+  },
 ];
 
 function FloatingBadge({ platform }: { platform: Platform }) {
@@ -174,6 +185,7 @@ export function V3AgenticPlatform() {
             <line x1="50%" y1="50%" x2="15%" y2="75%" stroke="white" strokeWidth="1" strokeDasharray="4 6" />
             <line x1="50%" y1="50%" x2="85%" y2="25%" stroke="white" strokeWidth="1" strokeDasharray="4 6" />
             <line x1="50%" y1="50%" x2="85%" y2="75%" stroke="white" strokeWidth="1" strokeDasharray="4 6" />
+            <line x1="50%" y1="50%" x2="50%" y2="87%" stroke="white" strokeWidth="1" strokeDasharray="4 6" />
           </svg>
 
           {/* Central Webflow MCP badge */}

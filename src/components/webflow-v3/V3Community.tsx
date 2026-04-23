@@ -66,6 +66,21 @@ const upcomingEvents = [
     date: 'TBD',
     type: 'Conference',
   },
+  {
+    title: 'WeAreDevelopers — San Jose',
+    date: 'TBD',
+    type: 'Conference',
+  },
+  {
+    title: 'WeAreDevelopers — Berlin',
+    date: 'TBD',
+    type: 'Conference',
+  },
+  {
+    title: 'Cloudflare Connect',
+    date: 'TBD',
+    type: 'Conference',
+  },
 ];
 
 const contributorPrograms = [
@@ -171,7 +186,7 @@ export function V3Community() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white border border-wfb-gray-200 rounded-lg p-4 sm:p-6"
+            className="bg-white border border-wfb-gray-200 rounded-lg p-4 sm:p-6 flex flex-col h-full"
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
               <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-wfb-blue" />
@@ -180,7 +195,7 @@ export function V3Community() {
               </h3>
             </div>
 
-            <div className="space-y-3 sm:space-y-4 max-h-64 overflow-y-auto pr-1">
+            <div className="space-y-3 sm:space-y-4 flex-1 min-h-0 overflow-y-auto pr-1">
               {upcomingEvents.map((event, index) => (
                 <a
                   key={index}

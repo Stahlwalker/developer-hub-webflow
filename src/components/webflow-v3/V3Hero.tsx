@@ -108,7 +108,7 @@ export function V3Hero() {
             Get started
             <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </a>
-          <a href="https://developers.webflow.com/cli/reference/webflow-cli" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 bg-white border border-wfb-gray-200 hover:border-wfb-gray-300 text-wfb-black text-base sm:text-lg font-semibold font-wf-heading rounded-lg transition-all min-h-[48px]">
+          <a href="https://developers.webflow.com/home" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 bg-white border border-wfb-gray-200 hover:border-wfb-gray-300 text-wfb-black text-base sm:text-lg font-semibold font-wf-heading rounded-lg transition-all min-h-[48px]">
             <Code className="mr-2 w-4 sm:w-5 h-4 sm:h-5" />
             View docs
           </a>
@@ -122,9 +122,9 @@ export function V3Hero() {
           className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto"
         >
           {[
-            { icon: Terminal, label: 'REST', desc: 'RESTful APIs for sites, pages, forms, assets, and custom code.' },
+            { icon: Terminal, label: 'APIs', desc: 'RESTful APIs for sites, pages, forms, assets, and custom code.' },
             { icon: Database, label: 'CMS', desc: 'Read, write, and publish collection content programmatically.' },
-            { icon: Code, label: 'SDK', desc: 'Official SDKs for JavaScript, Python, and more.' },
+            { icon: Code, label: 'SDKs', desc: 'Official SDKs for JavaScript, Python, and more.' },
           ].map((stat, index) => (
             <div key={index} className="bg-white border border-wfb-gray-200 rounded-lg p-5 sm:p-6 hover:border-wfb-black/20 transition-all">
               <div className="flex items-center justify-center mb-3 sm:mb-4">
